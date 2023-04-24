@@ -1,0 +1,50 @@
+header {
+    display: flex;
+    background-color: var(--color-background);
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 7vh;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+header .icon{
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+
+header .iconDeco{
+    font-size: 2rem;
+}
+
+header .navWeb-link{
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: inherit;
+}
+
+header .link {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+header .logo .firstWord-title{
+    font-family: 'Roboto', Courier;
+    color:var(--color-title);
+    font-weight: 700;
+}

@@ -1,0 +1,68 @@
+.movieElement, .tvElement{
+    width: 70%;
+    min-width: 200px;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.movieElement-title, .tvElement-title{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(0deg,  var(--color-text-effect) 0%, rgba(255,255,255,0) 100%);
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: 500;
+}
+
+.movieElement-img, .tvElement-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.imgBackground{
+ position: absolute;
+ z-index: -1;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+}
+
+.Background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.topLeftBackground{
+    background: linear-gradient(140deg, rgba(4,16,38,1) 30%, rgba(255,255,255,0) 100%);
+}
+
+.topRightBackground{
+    background: linear-gradient(214deg, rgba(4,16,38,1) 30%, rgba(255,255,255,0) 100%);
+}
+
+.elementImgBackground{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.bottomRightBackground{
+    background: linear-gradient(315deg, rgba(4,16,38,1) 30%, rgba(255,255,255,0) 100%);
+}
+
+.bottomLeftBackground{
+    background: linear-gradient(30deg, rgba(4,16,38,1) 30%, rgba(255,255,255,0) 100%);
+}
