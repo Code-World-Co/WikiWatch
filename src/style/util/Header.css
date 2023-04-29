@@ -1,4 +1,4 @@
-header {
+.navWeb {
     display: flex;
     background-color: var(--color-background);
     justify-content: space-between;
@@ -13,22 +13,22 @@ header {
     z-index: 1;
 }
 
-header .logo{
+.navWeb .logo{
     display: flex;
     align-items: center;
     font-size: 0.9rem;
 }
 
-header .icon{
+.navWeb .icon{
     font-size: 1.5rem;
     color: var(--color-text);
 }
 
-header .iconDeco{
+.navWeb .iconDeco{
     font-size: 2rem;
 }
 
-header .navWeb-link{
+.navWeb .navWeb-link{
     display: flex;
     flex-direction: row;
     width: 250px;
@@ -37,13 +37,13 @@ header .navWeb-link{
     font-size: inherit;
 }
 
-header .link {
+.navWeb .link {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
 }
 
-header .logo .firstWord-title{
+.navWeb .logo .firstWord-title{
     font-family: 'Roboto', Courier;
     color:var(--color-title);
     font-weight: 700;

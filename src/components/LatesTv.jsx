@@ -21,7 +21,7 @@ export default function LatestTv({poster_path, name, adult, overview, popularity
       </div>
 
       <article className="info">
-        <header>new TV series!</header>
+        <header><h1>NEW TV SERIES!</h1></header>
 
         <div className="titleContainer">
           <h1 className="title">{name}</h1>

@@ -1,5 +1,4 @@
-
-.home .trailer{
+.home .trailer {
     margin-top: 7vh;
     width: 100%;
     height: 93vh;
@@ -8,26 +7,26 @@
     left: 0;
 }
 
-.home .background{
+.home .background {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(0deg, rgba(4,16,38) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(0deg, rgba(4, 16, 38) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-.home .video{
+.home .video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     background-color: black;
 }
 
-.home .homePage{
+.home .homePage {
     width: 100%;
     height: 300px;
-    margin-top:7vh;
+    margin-top: 7vh;
     position: absolute;
     top: 60vh;
     margin: 0 auto;
@@ -37,17 +36,17 @@
     gap: 50px;
 }
 
-.homePage .title{
+.homePage .title {
     font-family: 'Roboto', cursive;
     font-size: 5rem;
     font-weight: 700;
 }
 
-.homePage .firstWord-title{
+.homePage .firstWord-title {
     color: var(--color-title);
 }
 
-.home .boxCard{
+.home .boxCard {
     height: 93vh;
     display: grid;
     grid-template-rows: repeat(3, minMax(1fr, 500px));
@@ -67,14 +66,14 @@
     justify-content: space-evenly;
 }
 
-.boxText .title-boxText{
+.boxText .title-boxText {
     font-family: 'Roboto', cursive;
     font-size: 2.5rem;
     font-weight: 700;
     cursor: pointer;
 }
 
-.boxCard .boxMedia{
+.boxCard .boxMedia {
     grid-column: 1 / 6;
     grid-row: 2;
     display: grid;
@@ -84,7 +83,7 @@
     justify-items: center;
 }
 
-.boxCard .boxButton{
+.boxCard .boxButton {
     grid-column: 3;
     grid-row: 3;
     font-size: 3rem;
@@ -93,13 +92,13 @@
     justify-content: center;
 }
 
-.boxButton .button{
+.boxButton .button {
     cursor: pointer;
     color: var(--color-text);
     border-radius: 100%;
 }
 
-.boxButton .button:hover{
+.boxButton .button:hover {
     font-weight: 700;
     scale: 1.1;
     background-color: var(--color-title);

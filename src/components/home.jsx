@@ -1,7 +1,7 @@
 //import style
 import "../style/Home.css";
 //import icons
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import video from "../assets/video/trailer.mp4";
 import { MovieElement, TvElement } from "./ElementHome";
 import { getTopRatedTv } from "../data/tv";
@@ -17,10 +17,10 @@ export function Home() {
     (async () => {
       setX(0)
       const dataMovieOrTv = selectedMediaType === 'movie' ? await getTopRatedMovies() : await getTopRatedTv()
-      setTopRatedMedia(dataMovieOrTv.slice(0,5))
+      setTopRatedMedia(dataMovieOrTv.slice(14, 19))
     })()
   },
-  [selectedMediaType]);
+    [selectedMediaType]);
 
   const handleClickLeft = () => {
     if (x > 0) {
@@ -47,24 +47,24 @@ export function Home() {
         <h2>You will find the best information of movies and series</h2>
       </section>
 
-    <section className="boxCard">
-      <div className="boxText">
-        <h2 className={`title-boxText ${selectedMediaType === 'movie' ? 'active' : 'effect'}`} onClick={() => setSelectedMediaType('movie')}>MOVIE</h2>
-        <h2 className={`title-boxText ${selectedMediaType !== 'movie' ? 'active' : 'effect'}`} onClick={() => setSelectedMediaType('tv')}>TV SERIES</h2>
-      </div>
-      <div className="boxMedia" style={selectedMediaType === 'movie' ? {} : {direction: 'rtl'}  }>
-        {
-        selectedMediaType === 'movie' ?
-        topRatedMedia.map((movie, index) => <MovieElement key={movie.id} {...movie} x={x} index={index} hover={(p) => setX(p)}/>)
-        :
-        topRatedMedia.map((tv, index) => <TvElement key={tv.id} {...tv} x={x} index={index} hover={(p) => setX(p)} />)
-        }
-      </div>
-      <div className="boxButton">
-        <MdOutlineKeyboardArrowLeft onClick={handleClickLeft} className="button"/>
-        <MdOutlineKeyboardArrowRight onClick={handleClickRight} className="button"/>
-      </div>
-    </section>
+      <section className="boxCard">
+        <div className="boxText">
+          <h2 className={`title-boxText ${selectedMediaType === 'movie' ? 'active' : 'effect'}`} onClick={() => setSelectedMediaType('movie')}>MOVIE</h2>
+          <h2 className={`title-boxText ${selectedMediaType !== 'movie' ? 'active' : 'effect'}`} onClick={() => setSelectedMediaType('tv')}>TV SERIES</h2>
+        </div>
+        <div className="boxMedia">
+          {
+            selectedMediaType === 'movie' ?
+              topRatedMedia.map((movie, index) => <MovieElement key={movie.id} {...movie} x={x} index={index} hover={(p) => setX(p)} />)
+              :
+              topRatedMedia.map((tv, index) => <TvElement key={tv.id} {...tv} x={x} index={index} hover={(p) => setX(p)} />)
+          }
+        </div>
+        <div className="boxButton">
+          <MdOutlineKeyboardArrowLeft onClick={handleClickLeft} className="button" />
+          <MdOutlineKeyboardArrowRight onClick={handleClickRight} className="button" />
+        </div>
+      </section>
 
     </main>
   );

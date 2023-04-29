@@ -2,6 +2,7 @@
 import { CiStar } from "react-icons/ci";
 //import images
 import cinePhoto from "../images/pexels-tima-miroshnichenko-7991378.jpg";
+
 export function MediaCard(props){
     return (
         <div className="card">

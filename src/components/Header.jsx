@@ -1,7 +1,6 @@
 //import icons
 import { MdTheaters } from "react-icons/md";
 import { CiMonitor, CiYoutube } from "react-icons/ci";
-import {  MdBookmarks } from "react-icons/md";
 import { NavLink, Link } from "react-router-dom";
 import '../style/util/Header.css'
 
@@ -14,8 +13,6 @@ export function Header() {
         <span className="firstWord-title title">WATCH</span>WIKI
         </h1>
       </Link>
-
-      <CiYoutube className="iconDeco icon" />
 
       <nav className="navWeb-link">
         <NavLink to="/movies" className='link'><MdTheaters className="icon" />MOVIES</NavLink>

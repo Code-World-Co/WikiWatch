@@ -22,7 +22,7 @@ export function LatestMovie({latest}) {
       </div>
 
       <article className="info">
-        <header>New Movie!</header>
+        <header><h1>NEW MOVIE!</h1></header>
 
         <div className="titleContainer">
           <h1 className="title">{latest.title}</h1>
