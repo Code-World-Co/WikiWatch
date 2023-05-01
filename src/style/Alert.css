@@ -23,6 +23,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    color: rgba(41, 1, 78, 0.952);
 }
 
 .video {
@@ -71,6 +72,7 @@
 }
 
 .alert-box-button .button {
+    font-family: 'Roboto', cursive;
     max-width: 130px;
     width: 100%;
     height: 30px;
@@ -78,4 +80,5 @@
     border: none;
     font-weight: 600;
     cursor: pointer;
+    font-size: 17px;
 }

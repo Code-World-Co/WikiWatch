@@ -10,7 +10,8 @@ export const AlertHome = ({ alertNoAdult, alertAdult }) => {
         <div className="alert">
             <div className="trailer">
                 <motion.div
-                animate={{ backgroundImage : optionHover === null ? 'linear-gradient(0deg, #041026 0%, #ffffff00 100%)' : optionHover === 'adult' ? 'linear-gradient(0deg, rgba(45,0,8,0.9303318739605217) 0%, rgba(255,255,255,0) 100%)' : 'linear-gradient(0deg, rgba(0,44,45,0.9303318739605217) 0%, rgba(255,255,255,0) 100%)'}}
+                initial={{backgroundColor : '#00000099'}}
+                animate={{ backgroundImage : optionHover === null ? 'linear-gradient(0deg, #041026 0%, #ffffff00 100%)' : optionHover === 'adult' ? 'linear-gradient(0deg, rgba(41, 1, 78, 0.952) 0%, rgba(255,255,255,0) 100%)' : 'linear-gradient(0deg, rgba(0,44,45,0.9303318739605217) 0%, rgba(255,255,255,0) 100%)'}}
                 transition={{duration : 0.5}} className="background"></motion.div>
                 <video className="video"
                     loop={true}
