@@ -81,7 +81,7 @@ export default function LatestTv({poster_path, name, adult, overview, popularity
         <section className="genresInfo">
           <h1>Geners</h1>
           <div className="genresContainer">
-            {!genres ? genres?.map((genre) => {
+            {genres.length ? genres.map((genre) => {
               return (
                 <span key={genres.indexOf(genre)} href={genre} className="genre">
                   {genre.name}

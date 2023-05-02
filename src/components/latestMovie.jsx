@@ -6,7 +6,7 @@ import { CiStar, CiRead, CiMedal } from 'react-icons/ci';
 import cinePhoto from "../images/pexels-tima-miroshnichenko-7991378.jpg";
 
 
-export function LatestMovie({latest}) {
+export function LatestMovie({latest, latest : {genres = []}}) {
   //info of the latest movie
 
   return (
@@ -66,7 +66,7 @@ export function LatestMovie({latest}) {
         <section className="genresInfo">
           <h1>Geners</h1>
           <div className="genresContainer">
-            {!latest.genres ? latest.genres?.map((genre) => {
+            {genres.length ? latest.genres.map((genre) => {
               return (
                 <span key={latest.genres.indexOf(genre)} className="genre">
                   {genre.name}
