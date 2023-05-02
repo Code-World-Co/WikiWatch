@@ -6,7 +6,9 @@ import { CiStar, CiRead, CiMedal, CiPlay1, CiSettings } from 'react-icons/ci';
 import cinePhoto from "../images/pexels-tima-miroshnichenko-7991378.jpg";
 //import data
 
-export default function LatestTv({poster_path, name, adult, overview, popularity, vote_average, vote_count, genres, number_of_seasons, status}) {
+export default function LatestTv({poster_path, name, adult, overview, popularity, vote_average, vote_count, genres = [], number_of_seasons, status}) {
+
+  console.log(genres)
 
   return (
     <section className="latestMovie">
@@ -79,13 +81,15 @@ export default function LatestTv({poster_path, name, adult, overview, popularity
         <section className="genresInfo">
           <h1>Geners</h1>
           <div className="genresContainer">
-            {genres?.map((genre) => {
+            {!genres ? genres?.map((genre) => {
               return (
-                <span key={genres.indexOf(genre)} className="genre">
+                <span key={genres.indexOf(genre)} href={genre} className="genre">
                   {genre.name}
                 </span>
               );
-            })}
+            })
+            :
+            <span className="genre">No Geners</span>}
           </div>
         </section>
       </article>
