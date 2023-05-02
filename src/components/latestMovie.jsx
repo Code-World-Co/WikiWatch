@@ -66,13 +66,13 @@ export function LatestMovie({latest}) {
         <section className="genresInfo">
           <h1>Geners</h1>
           <div className="genresContainer">
-            {latest.genres?.map((genre) => {
+            {!latest.genres ? latest.genres?.map((genre) => {
               return (
                 <span key={latest.genres.indexOf(genre)} className="genre">
                   {genre.name}
                 </span>
               );
-            })}
+            }) : <span className="genre">No Geners</span> }
           </div>
         </section>
       </article>
