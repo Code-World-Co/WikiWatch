@@ -24,9 +24,7 @@ const moviesLatest = {
   title: response.data.title,
   overview: response.data.overview,
   poster_path: response.data.poster_path,
-  popularity: response.data.popularity,
-  vote_average: response.data.vote_average,
-  vote_count: response.data.vote_average,
+  language: response.data.original_language,
   genres: response.data.genres,
 };
 return moviesLatest;
