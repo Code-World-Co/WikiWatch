@@ -10,7 +10,7 @@ export function Header() {
 
       <Link to="/" className="logo">
         <h1 className="title">
-        <span className="firstWord-title title">WATCH</span>WIKI
+        <span className="firstWord-title title">WIKI</span>WATCH
         </h1>
       </Link>
 

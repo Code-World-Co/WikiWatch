@@ -12,7 +12,7 @@ export function LatestMovie({latest, latest : {genres = []}}) {
     <section className="latestMovie">
       <div className="imageContainer">
         <img src={
-            latest.poster_path == undefined? 
+            latest.poster_path == undefined?
             cinePhoto : "https://image.tmdb.org/t/p/original" + latest.poster_path }
         />
       </div>
@@ -25,9 +25,9 @@ export function LatestMovie({latest, latest : {genres = []}}) {
            (<span className="adult">+18</span>) : (<span className="adult">Family</span>)
           }
           <span className="adult">{latest.language}</span>
-          
+
           </div>
-          
+
         </header>
         <section className="content">
         {
