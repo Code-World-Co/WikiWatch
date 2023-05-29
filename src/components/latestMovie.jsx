@@ -48,7 +48,7 @@ export function LatestMovie({latest, latest : {genres = []}}) {
           </div>
         </div>
         <div>
-        <CiStar className="icon"/>
+        
         </div>
         </section>
         
