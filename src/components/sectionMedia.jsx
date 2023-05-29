@@ -5,14 +5,32 @@ import { MediaCard } from "./mediaCard";
 //import style
 import "../style/MediaCard.css";
 //import icons
-import { CiStar, CiGrid41 } from "react-icons/ci";
+import { CiGrid41} from "react-icons/ci";
+import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 export function SectionMedia(props) {
     const [media, setMedia] = useState([])
+    const [topleft, setTopleft] = useState(0)
+    const [topright, setTopright] = useState(5)
+
     useEffect(() => {
-        const allMedia = props.media.slice(0, 10)
-        setMedia(allMedia)
-    }, [props.media])
+        setMedia(props.media.slice(topleft, topright))
+    }, [topleft, topright, props.media])
+
+    const clickLeft = () => {
+        if (topleft > 0) {
+            setTopleft(topleft - 5)
+            setTopright(topright - 5)
+        }
+    }
+
+    const clickRight = () => {
+        if (topright < props.media.length) {
+            setTopleft(topleft + 5)
+            setTopright(topright + 5)
+        }
+    }
+
 
     const onclick = () => {
         window.scrollTo(0, 0)
@@ -22,19 +40,35 @@ export function SectionMedia(props) {
         <section className="sectionMedia">
             <header>
                 <h1 className="title">{props.title}</h1>
-                <Link className="link" to="/all"><CiGrid41 />  All</Link>
             </header>
-            <div className="mediaContainer">
-                {
-                media.map((medium) => {
-                    return (
+
+            
+            <div className="linkContainer">
+                <Link className="link" to="/all"><CiGrid41/>All</Link>
+            </div>
+                
+            <section className="sectionMediaContent">
+                <div className="mediaContainer">
+                        {
+                            media.map((medium) => {
+                                return (
                         <Link key={medium.id} to={`/${props.category}/` + medium.id} onClick={onclick}>
                             <MediaCard media={medium} />
                         </Link>
-                    )
-                })
-                }
-            </div>
+                    )})
+                    }
+                </div>
+
+
+                <div className="buttons">
+                    <div className="buttonsContainer">
+                            <button onClick={clickLeft} className="button"><MdOutlineKeyboardArrowLeft/></button>
+                            <button onClick={clickRight} className="button"><MdOutlineKeyboardArrowRight/> </button>
+                    </div>
+                </div>
+
+            </section>
+            
         </section>
     )
 }
