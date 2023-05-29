@@ -34,19 +34,19 @@ const variable = {
     }
 }
 
-export const MovieElement = ({ poster_path, original_title, x, index, hover }) => {
+export const MovieElement = ({ poster_path, title, x, index, hover }) => {
 
     return (
         <div>
             <motion.div id={index} variants={variable} whileHover={() => hover(index)} className="movieElement" animate={x === index ? 'selectedElement' : 'effectElement'} >
-                <img className="movieElement-img loadingImg" loading="lazy" src={urlImg + poster_path} alt={original_title} />
-                <motion.h3 animate={x === index ? 'selectedTitle' : { opacity: 0 }} className="movieElement-title">{original_title}</motion.h3>
+                <img className="movieElement-img loadingImg" loading="lazy" src={urlImg + poster_path} alt={title} />
+                <motion.h3 animate={x === index ? 'selectedTitle' : { opacity: 0 }} className="movieElement-title">{title}</motion.h3>
             </motion.div>
             <AnimatePresence>
                 {x === index &&
                 <motion.div id={poster_path} variants={variable} initial='initialElementHoverEffect' animate='selectedElementHoverEffect' exit='exitElementHoverEffect' className='imgBackground'>
                     <div className='topRightBackground Background'></div>
-                    <img className='elementImgBackground' src={urlImg + poster_path} alt={original_title} />
+                    <img className='elementImgBackground' src={urlImg + poster_path} alt={title} />
                     <div className='bottomRightBackground Background'></div>
                 </motion.div>
                 }
@@ -56,19 +56,19 @@ export const MovieElement = ({ poster_path, original_title, x, index, hover }) =
 }
 
 
-export const TvElement = ({ poster_path, original_name, x, index, hover }) => {
+export const TvElement = ({ poster_path, name, x, index, hover }) => {
 
     return (
         <div>
             <motion.div id={index} variants={variable} whileHover={() => hover(index)} className="tvElement" animate={x === index ? 'selectedElement' : 'effectElement'}>
-                <img className="tvElement-img loadingImg" loading="lazy" src={urlImg + poster_path} alt={original_name} />
-                <motion.h3 animate={x === index ? 'selectedTitle' : { opacity: 0 }} className="tvElement-title">{original_name}</motion.h3>
+                <img className="tvElement-img loadingImg" loading="lazy" src={urlImg + poster_path} alt={name} />
+                <motion.h3 animate={x === index ? 'selectedTitle' : { opacity: 0 }} className="tvElement-title">{name}</motion.h3>
             </motion.div>
             <AnimatePresence>
             {x === index &&
                 <motion.div id={index} variants={variable} initial='initialElementHoverEffect' animate='selectedElementHoverEffect' exit='exitElementHoverEffect' className='imgBackground'>
                     <div className='topLeftBackground Background'></div>
-                    <img className='elementImgBackground' src={urlImg + poster_path} alt={original_name} />
+                    <img className='elementImgBackground' src={urlImg + poster_path} alt={name} />
                     <div className='bottomLeftBackground Background'></div>
                 </motion.div>
             }

@@ -17,7 +17,7 @@ export function Home() {
     (async () => {
       setX(0)
       const dataMovieOrTv = selectedMediaType === 'movie' ? await getTopRatedMovies() : await getTopRatedTv()
-      setTopRatedMedia(dataMovieOrTv.slice(14, 19))
+      setTopRatedMedia(dataMovieOrTv.slice(3, 8))
     })()
   },
     [selectedMediaType]);
@@ -43,7 +43,7 @@ export function Home() {
       </div>
 
       <section className="homePage">
-        <h1 className="title"><span className="firstWord-title title">WATCH</span> WIKI</h1>
+        <h1 className="title"><span className="firstWord-title title">WIKI</span> WATCH</h1>
         <h2>You will find the best information of movies and series</h2>
       </section>
 
