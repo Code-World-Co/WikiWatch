@@ -4,7 +4,8 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    height: 7vh;
+    height: 60px;
+    min-height: 7vh;
     padding: 0 20px;
     position: fixed;
     top: 0;
@@ -16,17 +17,16 @@
 .navWeb .logo{
     display: flex;
     align-items: center;
-    font-size: 0.9rem;
+}
+
+.navWeb .logo .title{
+    font-weight: 500;
 }
 
 .navWeb .icon{
-    font-size: 1.5rem;
     color: var(--color-text);
 }
 
-.navWeb .iconDeco{
-    font-size: 2rem;
-}
 
 .navWeb .navWeb-link{
     display: flex;
@@ -34,17 +34,37 @@
     width: 250px;
     justify-content: space-between;
     align-items: center;
-    font-size: inherit;
 }
 
 .navWeb .link {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .navWeb .logo .firstWord-title{
     font-family: 'Roboto', Courier;
     color:var(--color-title);
-    font-weight: 700;
+}
+
+@media screen and (width <= 450px){
+    .navWeb {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .navWeb .logo .title{
+        font-size: 1.8rem;
+    }
+
+    .navWeb .navWeb-link{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .navWeb .link {
+        font-size: 1.2rem;
+    }
 }
