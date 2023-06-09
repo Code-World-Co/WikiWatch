@@ -14,6 +14,7 @@ export function Home() {
   const [selectedMediaType, setSelectedMediaType] = useState('movie');
   const [topRatedMedia, setTopRatedMedia] = useState([]);
   const [x, setX] = useState(0)
+  const [positionClick, setPositionClick] = useState(true)
   let windowSize =  useMediaQuery('screen and (width <= 1150px)')
 
   useEffect(() => {
@@ -26,6 +27,7 @@ export function Home() {
     [selectedMediaType, windowSize ]);
 
   const handleClickLeft = () => {
+    setPositionClick(true)
     if (x > 0) {
       setX(x - 1)
     }else if (x === 0){
@@ -35,6 +37,7 @@ export function Home() {
   }
 
   const handleClickRight = () => {
+    setPositionClick(false)
     if (x < topRatedMedia.length - 1) {
       setX(x + 1)
     }else if (x === topRatedMedia.length - 1){
@@ -62,9 +65,9 @@ export function Home() {
         <motion.div className="boxMedia" style={windowSize ? {gridTemplateColumns:'1fr', gap : '0'} : {}}>
           {
             selectedMediaType === 'movie' ?
-              topRatedMedia.map((movie, index) => <MovieElement key={movie.id} {...movie} reSize={windowSize} x={x} index={index} hover={(p) => setX(p)} />)
+              topRatedMedia.map((movie, index) => <MovieElement key={movie.id} {...movie} reSize={windowSize} x={x} index={index} positionClick={positionClick} hover={(p) => setX(p)} />)
               :
-              topRatedMedia.map((tv, index) => <TvElement key={tv.id} {...tv} reSize={windowSize} x={x} index={index} hover={(p) => setX(p)} />)
+              topRatedMedia.map((tv, index) => <TvElement key={tv.id} {...tv} reSize={windowSize} x={x} index={index} positionClick={positionClick} hover={(p) => setX(p)} />)
           }
         </motion.div>
         <div className="boxButton">
