@@ -7,12 +7,14 @@
   }
   
   .sectionMedia header {
-    padding: 0px 20px;
+    padding: 0px 1.5vw;
   }
   
   .sectionMedia header .title {
     font-size: 36px;
     font-weight: 800;
+    border-bottom: 2px solid var(--color-title);
+    width: fit-content;
   }
   
   .sectionMedia .linkContainer {
@@ -20,9 +22,7 @@
     justify-content: center;
     justify-items: center;
     position: absolute;
-    top: 25px;
     width: 100%;
-    z-index: 2;
   }
   
   .sectionMedia .linkContainer .link {
@@ -31,7 +31,7 @@
     padding: 2px 20px;
     background-color: var(--color-text-effect);
     border-radius: 5px 5px 30px 30px;
-    bottom: -18px;
+    
     display: flex;
     align-items: center;
     gap: 5px;
@@ -45,9 +45,8 @@
   .sectionMedia .mediaContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 0px 5px;
+    padding: 15px 5px;
     gap: 7px;
-    overflow: hidden; /* Evitar que las cartas se desborden */
     position: relative; /* Agregar posición relativa al contenedor */
   }
   
@@ -61,13 +60,13 @@
     height: 300px;
     transition: 500ms;
     position: relative;
-    z-index: 1; /* Asegurar que las cartas estén por encima del contenedor de los botones */
+    /* Asegurar que las cartas estén por encima del contenedor de los botones */
   }
   
   .sectionMedia .mediaContainer a:hover .card {
     box-shadow: 7px 7px var(--color-title);
     transform: scale(1.05);
-    z-index: 2; /* Aumentar el índice z para que las cartas en hover estén por encima del contenedor de los botones */
+     /* Aumentar el índice z para que las cartas en hover estén por encima del contenedor de los botones */
   }
   
   .sectionMedia .mediaContainer a .card span {
@@ -94,6 +93,39 @@
   .sectionMediaContent {
     position: relative;
   }
+
+  .sectionMediaContent .linkContainer{
+    position: absolute;
+    top:0;
+  }
+
+
+  .sectionMediaContent .linkContainer {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .sectionMediaContent .linkContainer .link {
+    position: relative;
+    font-size: 30px;
+    padding: 2px 20px;
+    background-color: var(--color-text-effect);
+    border-radius: 5px 5px 30px 30px;
+    
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 500ms;
+  }
+
+  .sectionMediaContent .linkContainer .link:hover{
+    transform: scale(1.1);
+  }
+
+
   
   .sectionMediaContent .buttons {
     width: 100%;
@@ -117,7 +149,7 @@
     padding: 5px;
     font-size: 40px;
     transition: 500ms;
-    z-index: 1; /* Asegurar que los botones estén por encima del contenedor de las cartas */
+     /* Asegurar que los botones estén por encima del contenedor de las cartas */
   }
   
   .sectionMediaContent .buttons .buttonsContainer .button:hover {

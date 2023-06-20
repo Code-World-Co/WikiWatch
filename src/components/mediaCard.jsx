@@ -18,10 +18,8 @@ export function MediaCard(props){
 export function ReviewCard(props){
     return(
         <div className="reviewCard">
-            <div className="review">
                 <h1>{props.review.author}</h1>
                 <p>{props.review.content}</p>
-            </div>
         </div>
     )
 }

@@ -64,13 +64,16 @@ export function SectionMedia(props) {
         <h1 className="title">{props.title}</h1>
       </header>
 
+      
+
+      <section className="sectionMediaContent">
+
       <div className="linkContainer">
         <Link className="link" to="/all">
           <CiGrid41 /> 
         </Link>
       </div>
-
-      <section className="sectionMediaContent">
+      
         <div className="mediaContainer">
           {media.map((medium) => {
             return (

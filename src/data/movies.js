@@ -39,7 +39,7 @@ export async function getPopularMovies() {
   const moviesPopular = response.data.results.map((movie) => ({
     id: movie.id,
     poster_path: movie.poster_path,
-    vote_average: movie.vote_average,
+    vote_average: movie.vote_average.toFixed(1) ,
   
   }));
   return moviesPopular;
@@ -54,7 +54,7 @@ export async function getTopRatedMovies() {
   const moviesTopRated = response.data.results.map((movie) => ({
     id: movie.id,
     poster_path: movie.poster_path,
-    vote_average: movie.vote_average,
+    vote_average: movie.vote_average.toFixed(1),
     original_title: movie.original_title,
   }));
   return moviesTopRated;
@@ -69,7 +69,7 @@ export async function getUpcomingMovies() {
   const moviesUpcoming = response.data.results.map((movie) => ({
     id: movie.id,
     poster_path: movie.poster_path,
-    vote_average: movie.vote_average,
+    vote_average: movie.vote_average.toFixed(1),
   }));
   return moviesUpcoming;
 }
@@ -83,7 +83,7 @@ export async function getNowPlayingMovies() {
   const moviesNowPlaying = response.data.results.map((movie) => ({
     id: movie.id,
     poster_path: movie.poster_path,
-    vote_average: movie.vote_average,
+    vote_average: movie.vote_average.toFixed(1),
   }));
   return moviesNowPlaying;
 }
@@ -97,10 +97,11 @@ export async function getInfoMovie(id) {
     title: response.data.title,
     overview: response.data.overview,
     poster_path: response.data.poster_path,
-    popularity: response.data.popularity,
-    vote_average: response.data.vote_average,
-    vote_count: response.data.vote_average,
+    popularity: response.data.popularity.toFixed(1),
+    vote_average: response.data.vote_average.toFixed(1),
+    vote_count: response.data.vote_average.toFixed(1),
     genres: response.data.genres,
+    language: response.data.original_language,
   };
   return movieInfo;
 }
@@ -123,7 +124,7 @@ export async function getSimilarMovies(id) {
   const similarMovies = response.data.results.map((movie) => ({
     id: movie.id,
     poster_path: movie.poster_path,
-    vote_average: movie.vote_average,
+    vote_average: movie.vote_average.toFixed(1),
   }));
   return similarMovies;
 }
