@@ -1,0 +1,162 @@
+.MediaInfo{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 16px;
+    gap: 20px;
+}
+
+.MediaInfo .imageContainer{
+    flex:  0 7 360px ;
+    height: 250px;
+}
+
+.MediaInfo .imageContainer img{
+    width:100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 7px 7px var(--color-title)
+}
+
+.MediaInfo .info{
+    flex: 0.2 1 450px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.MediaInfo .info header h1{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-title);
+    text-transform: uppercase;
+}
+
+.MediaInfo .info header .subInfo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.MediaInfo .info header .subInfo .adult{
+    background-color: var(--color-title);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.MediaInfo .info .content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.MediaInfo .info .content .genresInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.MediaInfo .info .content .genresInfo .title{
+    color: var(--color-title);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.MediaInfo .info .content .genresInfo .genresContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.MediaInfo .info .content .genresInfo .genresContainer .genre{
+    background-color: var(--color-title);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.MediaInfo .info .content .notes{
+    display:flex;
+    justify-content: space-around;
+    gap: 20px;
+    color: aliceblue;
+}
+
+.MediaInfo .info .content .notes .note{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.MediaInfo .info .content .notes .note .icon{
+    font-size: 35px;
+    color: var(--color-title);
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.latestMovie .info .content div .icon{
+    color: var(--color-title);
+    font-size: 55px;
+    animation: rotate 4s infinite linear;
+}
+
+.reviews header {
+    padding: 0px 1.5vw;
+}
+.reviews header .title{
+    font-size: 30px;
+    font-weight: 800;
+    background-color: var(--color-title);
+    padding: 5px 10px;
+    border-radius: 7px;
+    width: fit-content;
+}
+
+.reviews .reviewsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 7px;
+}
+
+.reviews .reviewsContainer .reviewCard{
+    background-color: var(--color-title);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.reviews .reviewsContainer .reviewCard h1{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+

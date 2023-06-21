@@ -115,7 +115,7 @@ export async function getReviewsMovie (id) {
     created_at : review.created_at,
     rating : review.author_details.rating,
   }));
-  console.log(movieReviews);
+
   return movieReviews;
 }
 

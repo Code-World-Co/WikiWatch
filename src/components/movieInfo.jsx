@@ -16,7 +16,9 @@ import { SectionMedia } from "./sectionMedia";
 
 export function MovieInfo() {
   const { id } = useParams();
-  const [movie, setMovie] = useState({});
+  const [movie, setMovie] = useState({
+    genres: [],
+  });
   const [reviews, setReviews] = useState([]);
   const [similarMovies, setSimilarMovies] = useState([]);
   const [videos, setVideos] = useState([]);
@@ -90,6 +92,19 @@ export function MovieInfo() {
              
             </div>
           </div>
+
+          <div className="genresInfo">
+          <h1 className="title">Geners</h1>
+          <div className="genresContainer">
+            {movie.genres.length ? movie.genres.map((genre) => {
+              return (
+                <span key={movie.genres.indexOf(genre)} className="genre">
+                  {genre.name}
+                </span>
+              );
+            }) : <span className="genre">No Geners</span> }
+          </div>
+        </div>
         
         </section>
         
@@ -103,7 +118,8 @@ export function MovieInfo() {
       <SectionMedia title="Similar Movies"  category='movie'  media={similarMovies} />
 
       <section className="reviews">
-      <h1 className='title' >Reviews</h1>
+        <header><h1 className='title' >Reviews</h1></header>
+      
       <div className="reviewsContainer">
         {
           reviews.length === 0 ?
