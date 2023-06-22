@@ -123,40 +123,50 @@
     font-size: 55px;
     animation: rotate 4s infinite linear;
 }
-
 .reviews header {
     padding: 0px 1.5vw;
-}
-.reviews header .title{
+  }
+  
+  .reviews header .title {
     font-size: 30px;
     font-weight: 800;
     background-color: var(--color-title);
     padding: 5px 10px;
     border-radius: 7px;
     width: fit-content;
-}
-
-.reviews .reviewsContainer{
+    margin-bottom: 10px;
+  }
+  
+  .reviews .reviewsContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     gap: 20px;
-    padding: 7px;
-}
-
-.reviews .reviewsContainer .reviewCard{
-    background-color: var(--color-title);
+    padding: 0px 1.5vw;
+  }
+  
+  .reviews .reviewsContainer .reviewCard {
+    background-color: var(--color-text-effect);
     border-radius: 5px;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 7px;
-}
-
-.reviews .reviewsContainer .reviewCard h1{
+    transition: background-color 500ms;
+    padding: 10px 15px;
+    text-align: justify;
+  }
+  
+  .reviews .reviewsContainer .reviewCard:hover {
+    background-color: var(--color-title);
     color: white;
+  }
+  
+  .reviews .reviewsContainer .reviewCard h1 {
+    background-color: var(--color-title);
+    width: max-content;
+    padding: 5px 10px;
     font-size: 20px;
     font-weight: 500;
-}
-
-
+    border-radius: 7px;
+  }
+  

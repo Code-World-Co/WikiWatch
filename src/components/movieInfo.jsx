@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getInfoMovie } from "../data/movies";
 import { getReviewsMovie } from "../data/movies";
 import { getSimilarMovies } from "../data/movies";
-import { getVideos } from "../data/movies";
+
 //import style
 import "../style/MediaInfo.css"
 //import image
@@ -21,17 +21,16 @@ export function MovieInfo() {
   });
   const [reviews, setReviews] = useState([]);
   const [similarMovies, setSimilarMovies] = useState([]);
-  const [videos, setVideos] = useState([]);
+
   useEffect(() => {
     async function fetchData() {
       const movie = await getInfoMovie(id);
       setMovie(movie);
       const reviews = await getReviewsMovie(id);
-      setReviews(reviews);
+      setReviews(reviews.slice(0, 2));
       const similarMovies = await getSimilarMovies(id);
       setSimilarMovies(similarMovies);
-      const videos = await getVideos(id);
-      setVideos(videos);
+      
     }
     fetchData();
   }, [id]);
@@ -124,6 +123,7 @@ export function MovieInfo() {
         {
           reviews.length === 0 ?
           <h1>No reviews</h1> :
+
           reviews.map((review) => (
             <ReviewCard key={reviews.indexOf(review)} review={review} />
           )

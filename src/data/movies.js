@@ -129,14 +129,3 @@ export async function getSimilarMovies(id) {
   return similarMovies;
 }
 
-export async function getVideos(id) {
-  const response = await axios.get(`${links.base}${id}/videos?api_key=${apiKey}&language=en-US`);
-  const videos = response.data.results.map((video) => ({
-    id: video.id,
-    key: video.key,
-    name: video.name,
-    site: video.site,
-    type: video.type,
-  }));
-  return videos;
-}
