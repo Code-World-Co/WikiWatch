@@ -46,8 +46,8 @@ export const getTopRatedTv = async () => {
   const { data } = await axios.get('https://api.themoviedb.org/3/tv/top_rated?api_key=5cec1a15e2c219c4f08d84958efb00e7&language=en-US')
 
   return data.results.map((tv) => {
-    const {id, poster_path, vote_average, original_name} = tv
-    return {id, poster_path, vote_average, original_name}
+    const {id, poster_path, vote_average, original_name, name} = tv
+    return {id, poster_path, vote_average, original_name, name}
   })
 }
 
