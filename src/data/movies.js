@@ -40,7 +40,6 @@ export async function getPopularMovies() {
     id: movie.id,
     poster_path: movie.poster_path,
     vote_average: movie.vote_average.toFixed(1) ,
-  
   }));
   return moviesPopular;
 }
@@ -56,6 +55,7 @@ export async function getTopRatedMovies() {
     poster_path: movie.poster_path,
     vote_average: movie.vote_average.toFixed(1),
     original_title: movie.original_title,
+    title: movie.title,
   }));
   return moviesTopRated;
 }
