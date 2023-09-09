@@ -1,18 +1,17 @@
 footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
     margin-top: 30px;
-    width: 100%;
     padding: 15px 10px;
-    gap: 10px;
     background: linear-gradient(0deg, rgba(22,10,64,1) 35%, rgba(4,16,38,1) 100%);
 }
 
 footer .image{
-    width: 100px;
-    height: 100%;
+    display: flex;
+    flex-basis: 150px;
+    align-items: center;
 }
 
 footer .image img{
@@ -23,32 +22,21 @@ footer .image img{
 
 footer .info{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    height: 100%;
+    flex-direction: column;
+    flex: 0.1 2 400px;
+    gap: 20px;
 }
+
 
 footer .info .box-info{
-    position: relative;
-    font-size: 8px;
+ 
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
+    gap: 5px;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-
-footer .info .box-info:last-child::before{
-    content: '';
-    top: 10;
-    left: -12px;
-    width: 4px;
-    height: 70px;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgb(255, 255, 255) 50%, rgba(255,255,255,0) 100%);
-    position: absolute;
-}
 
 footer .info .box-info .box-icons {
     display: flex;
@@ -57,7 +45,12 @@ footer .info .box-info .box-icons {
     align-items: center;
 }
 
-footer .info .box-info .box-icons svg{
+footer .info .box-info .box-icons .icon{
     font-size: 30px;
     transition: 500ms;
+}
+
+footer .info .box-info .box-icons .icon:hover{
+    color: #fff;
+    transform: scale(1.2);
 }
