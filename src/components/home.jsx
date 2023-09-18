@@ -6,9 +6,10 @@ import video from "../assets/video/trailer.mp4";
 import { MovieElement, TvElement } from "./ElementHome";
 import { getTopRatedTv } from "../data/tv";
 import { getTopRatedMovies } from "../data/movies";
-import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { useWindowSize, useMediaQuery } from "@uidotdev/usehooks";
 import {AnimatePresence, motion} from 'framer-motion';
+import { MdMovieFilter } from "react-icons/md";
+
 
 export function Home() {
   const [selectedMediaType, setSelectedMediaType] = useState('movie');
@@ -26,24 +27,7 @@ export function Home() {
   },
     [selectedMediaType, windowSize ]);
 
-  const handleClickLeft = () => {
-    setPositionClick(true)
-    if (x > 0) {
-      setX(x - 1)
-    }else if (x === 0){
-      setX(4)
-    }
-
-  }
-
-  const handleClickRight = () => {
-    setPositionClick(false)
-    if (x < topRatedMedia.length - 1) {
-      setX(x + 1)
-    }else if (x === topRatedMedia.length - 1){
-      setX(0)
-    }
-  }
+  
 
   return (
     <main className="home">
@@ -70,11 +54,32 @@ export function Home() {
               topRatedMedia.map((tv, index) => <TvElement key={tv.id} {...tv} reSize={windowSize} x={x} index={index} positionClick={positionClick} hover={(p) => setX(p)} />)
           }
         </motion.div>
-        <div className="boxButton">
-          <MdOutlineKeyboardArrowLeft onClick={handleClickLeft} className="button" />
-          <MdOutlineKeyboardArrowRight onClick={handleClickRight} className="button" />
-        </div>
+    
       </section>
+
+     <section className="information">
+
+      <div className="text">
+      You can find all informations about your favorite movies and series in this web site
+      <ul>
+        <li>Search for your favorite movies and series</li>
+        <li>Find the best movies and series</li>
+        <li>Reviews about yout favorite moves ans tv series</li>
+      </ul>
+      </div>
+
+      <div className="image">
+          <div className="fond">
+             <MdMovieFilter className="icon"  />
+             
+          </div>
+      </div>
+    
+     </section>
+     
+        <section className="prefooter">
+          This Proyect is free and open source, you can find the code in my github
+        </section>
 
     </main>
   );

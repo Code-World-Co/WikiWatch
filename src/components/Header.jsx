@@ -15,8 +15,8 @@ export function Header() {
       </Link>
 
       <nav className="navWeb-link">
-        <NavLink to="/movies" className='link'><MdTheaters className="icon" />MOVIES</NavLink>
-        <NavLink to="/tv" className='link'><CiMonitor className="icon" /> TV</NavLink>
+        <NavLink to="/movies" className='link'><MdTheaters className="icon" />Movies</NavLink>
+        <NavLink to="/tv" className='link'><CiMonitor className="icon" /> Tv</NavLink>
       </nav>
 
     </header>

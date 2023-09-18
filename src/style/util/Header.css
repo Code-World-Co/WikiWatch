@@ -13,7 +13,7 @@
     width: 100%;
     z-index: 99;
 }
-
+    
 .navWeb .logo{
     display: flex;
     align-items: center;
@@ -23,15 +23,10 @@
     font-weight: 500;
 }
 
-.navWeb .icon{
-    color: var(--color-text);
-}
-
-
 .navWeb .navWeb-link{
     display: flex;
     flex-direction: row;
-    width: 250px;
+    flex-basis: 250px;
     justify-content: space-between;
     align-items: center;
 }
@@ -39,8 +34,7 @@
 .navWeb .link {
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.8rem;
 }
 
 .navWeb .logo .firstWord-title{
