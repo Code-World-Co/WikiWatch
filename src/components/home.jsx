@@ -39,6 +39,7 @@ export function Home() {
       <section className="homePage">
         <h1 className="title"><span className="firstWord-title title">WIKI</span> WATCH</h1>
         <h2>You will find the best information of movies and series</h2>
+        <div className="nav"></div>
       </section>
 
       <section className="boxCard">
