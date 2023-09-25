@@ -9,6 +9,7 @@ import { getTopRatedMovies } from "../data/movies";
 import { useWindowSize, useMediaQuery } from "@uidotdev/usehooks";
 import {AnimatePresence, motion} from 'framer-motion';
 import { MdMovieFilter } from "react-icons/md";
+import { AiFillGithub } from "react-icons/ai";
 
 
 export function Home() {
@@ -39,7 +40,11 @@ export function Home() {
       <section className="homePage">
         <h1 className="title"><span className="firstWord-title title">WIKI</span> WATCH</h1>
         <h2>You will find the best information of movies and series</h2>
-        <div className="nav"></div>
+        <div className="nav">
+          <a className="link" href="https://github.com/Code-World-Co/WikiWatch">
+            <AiFillGithub className="icon"/>
+          </a>
+        </div>
       </section>
 
       <section className="boxCard">
@@ -79,9 +84,18 @@ export function Home() {
      </section>
      
         <section className="prefooter">
-          This Proyect is free and open source, you can find the code in my github
-        </section>
+          <div className="cards">
+            <div className="card" id="pfCard1"></div>
+            <div className="card"  id="pfCard2"></div>
+            <div className="card"  id="pfCard3"></div>
+          </div>
 
+          <div className="text">
+            Enyoy with the best constent of the world of cinema and series!
+          </div>
+         
+        </section>
+      
     </main>
   );
 }

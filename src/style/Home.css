@@ -63,13 +63,37 @@
   height: 50px;
   border-radius: 100px 100px 5px 5px;
   transform: rotate(90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .homePage .nav:hover{
-  background-color: red;
   left: -70px;
 
 }
+
+.homePage .nav .link{
+
+transform: rotate(-90deg);
+}
+
+.homePage .nav .link:hover{
+  width: max-content;
+}
+
+.homePage .nav .link .icon{
+  transition: 500ms;
+  font-size: 35px;
+  color: var(--color-text);
+}
+
+.homePage .nav .link .icon:hover{
+  color: var(--color-title);
+  transform: scale(1.2);
+}
+
+
 
 .home .boxCard {
     height: 93vh;
@@ -236,9 +260,43 @@
   }
   
   
-
 .prefooter{
-    padding: 10px 5px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
+
+.prefooter .cards{
+    display: flex;
+    justify-content: center;
+}
+
+
+.prefooter .cards .card{
+  width: 300px;
+  height: 300px;
+  background-color: var(--color-text-effect);
+  border-radius: 16px;
+  box-shadow: 0 0 10px var(--color-effect-title);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#pfCard1{
+  position: relative;
+  left: 5px;
+}
+
+#pfCard2{
+  position: relative;
+  left: 5px;
+  z-index: 2;
+  transform: scale(1.2);
+}
+
+.prefooter .text{
+  text-align: center;
+}
