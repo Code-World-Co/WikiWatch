@@ -8,9 +8,10 @@ import { getTopRatedTv } from "../data/tv";
 import { getTopRatedMovies } from "../data/movies";
 import { useWindowSize, useMediaQuery } from "@uidotdev/usehooks";
 import {AnimatePresence, motion} from 'framer-motion';
-import { MdMovieFilter } from "react-icons/md";
+import { MdLocalMovies, MdMovieFilter } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
-
+import { SlControlEnd } from "react-icons/sl";
+import { SiSteelseries } from "react-icons/si";
 
 export function Home() {
   const [selectedMediaType, setSelectedMediaType] = useState('movie');
@@ -85,9 +86,9 @@ export function Home() {
      
         <section className="prefooter">
           <div className="cards">
-            <div className="card" id="pfCard1"></div>
-            <div className="card"  id="pfCard2"></div>
-            <div className="card"  id="pfCard3"></div>
+            <div className="card" id="pfCard1"> <MdLocalMovies className="icon" /> </div>
+            <div className="card"  id="pfCard2"> <SlControlEnd className="icon"/> </div>
+            <div className="card"  id="pfCard3"><SiSteelseries className="icon"/>  </div>
           </div>
 
           <div className="text">

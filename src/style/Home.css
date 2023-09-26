@@ -214,15 +214,13 @@ transform: rotate(-90deg);
   .information .image .fond .icon {
     font-size: 180px;
     animation-name: iconInformationAnimation;
-    animation-duration: 7s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
   }
   
   @keyframes iconInformationAnimation {
-    0% {
-      opacity: 0;
-      transform: scale(0);
-    }
+  
     25% {
       opacity: 1;
       transform: scale(1.2);
@@ -235,14 +233,8 @@ transform: rotate(-90deg);
       opacity: 1;
       transform: scale(1.2) rotate(360deg);
     }
-    90% {
-      opacity: 0;
-      transform: scale(0) rotate(360deg);
-    }
-    100% {
-      opacity: 0;
-      transform: scale(0) rotate(360deg);
-    }
+    
+    
   }
   
   .information .text {
@@ -263,19 +255,20 @@ transform: rotate(-90deg);
 .prefooter{
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 60px;
 }
 
 
 .prefooter .cards{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 
 .prefooter .cards .card{
-  width: 300px;
-  height: 300px;
+  width: 10em;
+  height: 10em;
   background-color: var(--color-text-effect);
   border-radius: 16px;
   box-shadow: 0 0 10px var(--color-effect-title);
@@ -284,6 +277,17 @@ transform: rotate(-90deg);
   justify-content: center;
 
 }
+
+.prefooter .cards .card .icon{
+  font-size: 100px;
+  transition: 500ms;
+}
+
+.prefooter .cards .card .icon:hover{
+  transform: scale(1.2);
+  
+}
+
 
 #pfCard1{
   position: relative;
