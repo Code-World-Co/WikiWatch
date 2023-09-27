@@ -55,7 +55,7 @@
         flex-wrap: nowrap;
         justify-content: center;
         padding: 20px 5px;
-        gap: 7px;
+        gap: 10px;
     }
 
     .navWeb .logo .title{
