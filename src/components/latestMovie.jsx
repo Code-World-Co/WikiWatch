@@ -9,6 +9,7 @@ import cinePhoto from "../images/pexels-tima-miroshnichenko-7991378.jpg";
 export function LatestMovie({latest, latest : {genres = []}}) {
   //info of the latest movie
   return (
+    <section className="containerMedia">
     <section className="latestMovie">
       <div className="imageContainer">
         <img src={
@@ -58,6 +59,7 @@ export function LatestMovie({latest, latest : {genres = []}}) {
 
 
       </article>
+    </section>
     </section>
   );
 }

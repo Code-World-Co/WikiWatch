@@ -4,7 +4,7 @@ import "../style/Home.css";
 import { useEffect, useState } from "react";
 import video from "../assets/video/trailer.mp4";
 import { MovieElement, TvElement } from "./ElementHome";
-import { getTopRatedTv } from "../data/tv";
+import { getTopRatedTvs } from "../data/tv";
 import { getTopRatedMovies } from "../data/movies";
 import { useWindowSize, useMediaQuery } from "@uidotdev/usehooks";
 import {AnimatePresence, motion} from 'framer-motion';
@@ -23,7 +23,7 @@ export function Home() {
   useEffect(() => {
     (async () => {
       setX(0)
-      const dataMovieOrTv = selectedMediaType === 'movie' ? await getTopRatedMovies() : await getTopRatedTv()
+      const dataMovieOrTv = selectedMediaType === 'movie' ? await getTopRatedMovies() : await getTopRatedTvs()
       setTopRatedMedia(dataMovieOrTv.slice(3, 8))
     })()
   },
@@ -64,38 +64,7 @@ export function Home() {
     
       </section>
 
-     <section className="information">
-
-      <div className="text">
-      You can find all informations about your favorite movies and series in this web site
-      <ul>
-        <li>Search for your favorite movies and series</li>
-        <li>Find the best movies and series</li>
-        <li>Reviews about yout favorite moves ans tv series</li>
-      </ul>
-      </div>
-
-      <div className="image">
-          <div className="fond">
-             <MdMovieFilter className="icon"  />
-             
-          </div>
-      </div>
-    
-     </section>
-     
-        <section className="prefooter">
-          <div className="cards">
-            <div className="card" id="pfCard1"> <MdLocalMovies className="icon" /> </div>
-            <div className="card"  id="pfCard2"> <SlControlEnd className="icon"/> </div>
-            <div className="card"  id="pfCard3"><SiSteelseries className="icon"/>  </div>
-          </div>
-
-          <div className="text">
-            Enyoy with the best constent of the world of cinema and series!
-          </div>
-         
-        </section>
+  
       
     </main>
   );

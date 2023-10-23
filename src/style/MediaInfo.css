@@ -144,6 +144,10 @@
     gap: 20px;
     padding: 0px 1.5vw;
   }
+
+  .reviews .reviewsContainer h1 {
+    text-align: center;
+  }
   
   .reviews .reviewsContainer .reviewCard {
     background-color: var(--color-text-effect);

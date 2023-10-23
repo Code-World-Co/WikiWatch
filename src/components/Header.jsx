@@ -5,10 +5,15 @@ import { NavLink, Link } from "react-router-dom";
 import '../style/util/Header.css'
 
 export function Header() {
+
+  const onclick = () => {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <header className="navWeb">
 
-      <Link to="/" className="logo">
+      <Link to="/WikiWatch/" className="logo" onClick={onclick}  > 
         <h1 className="title">
         <span className="firstWord-title title">WIKI</span>WATCH
         </h1>

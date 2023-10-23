@@ -1,10 +1,16 @@
+.containerMedia{
+    margin-top: 60px;
+}
+
 .latestMovie{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 20px 16px;
     gap: 20px;
+    background-image: radial-gradient(circle, #ac46ff 0%, #041026 100%);
+    box-shadow: 0px 0px 65px 0px var(--color-text-effect);
+
 }
 
 .latestMovie .imageContainer{
@@ -25,13 +31,14 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+    padding: 10px 0px;
 }
 
 .latestMovie .info header h1{
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: var(--color-title);
+
     text-transform: uppercase;
 }
 
@@ -64,7 +71,6 @@
 }
 
 .latestMovie .info .content .genresInfo .title{
-    color: var(--color-title);
     font-size: 18px;
     font-weight: 500;
 }
