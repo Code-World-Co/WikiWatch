@@ -12,10 +12,14 @@ export function Footer() {
         </a>
       </div>
 
+
+
       <div className="info">
+        
+       <h3>Participants</h3> 
 
         <div className="box-info">
-          <h1 className="title">Esnaider Ortega</h1>
+          Esnaider David Ortega Rodriguez
           <div className="box-icons">
             <a href="https://www.linkedin.com/in/esnaideror/"><CiLinkedin className="icon" /></a>
             <a href="https://github.com/Darkin03/"><AiFillGithub className="icon" /></a>
@@ -24,8 +28,7 @@ export function Footer() {
         </div>
 
         <div className="box-info">
-          <h1 className="title">Miguel Lopez</h1>
-          <div className="box-icons">
+          Miguel Angel lopez Coneo         <div className="box-icons">
             <a href="https://www.linkedin.com/in/miguelarcangellopezconeo/"><CiLinkedin className="icon" /></a>
             <a href="https://github.com/miguelcode-02"><AiFillGithub className="icon" /></a>
             <a href="https://www.instagram.com/miguel._.unu/"><CiInstagram className="icon" /></a>

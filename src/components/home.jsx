@@ -4,11 +4,14 @@ import "../style/Home.css";
 import { useEffect, useState } from "react";
 import video from "../assets/video/trailer.mp4";
 import { MovieElement, TvElement } from "./ElementHome";
-import { getTopRatedTv } from "../data/tv";
+import { getTopRatedTvs } from "../data/tv";
 import { getTopRatedMovies } from "../data/movies";
-import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { useWindowSize, useMediaQuery } from "@uidotdev/usehooks";
 import {AnimatePresence, motion} from 'framer-motion';
+import { MdLocalMovies, MdMovieFilter } from "react-icons/md";
+import { AiFillGithub } from "react-icons/ai";
+import { SlControlEnd } from "react-icons/sl";
+import { SiSteelseries } from "react-icons/si";
 
 export function Home() {
   const [selectedMediaType, setSelectedMediaType] = useState('movie');
@@ -20,30 +23,13 @@ export function Home() {
   useEffect(() => {
     (async () => {
       setX(0)
-      const dataMovieOrTv = selectedMediaType === 'movie' ? await getTopRatedMovies() : await getTopRatedTv()
+      const dataMovieOrTv = selectedMediaType === 'movie' ? await getTopRatedMovies() : await getTopRatedTvs()
       setTopRatedMedia(dataMovieOrTv.slice(3, 8))
     })()
   },
     [selectedMediaType, windowSize ]);
 
-  const handleClickLeft = () => {
-    setPositionClick(true)
-    if (x > 0) {
-      setX(x - 1)
-    }else if (x === 0){
-      setX(4)
-    }
-
-  }
-
-  const handleClickRight = () => {
-    setPositionClick(false)
-    if (x < topRatedMedia.length - 1) {
-      setX(x + 1)
-    }else if (x === topRatedMedia.length - 1){
-      setX(0)
-    }
-  }
+  
 
   return (
     <main className="home">
@@ -55,6 +41,11 @@ export function Home() {
       <section className="homePage">
         <h1 className="title"><span className="firstWord-title title">WIKI</span> WATCH</h1>
         <h2>You will find the best information of movies and series</h2>
+        <div className="nav">
+          <a className="link" href="https://github.com/Code-World-Co/WikiWatch">
+            <AiFillGithub className="icon"/>
+          </a>
+        </div>
       </section>
 
       <section className="boxCard">
@@ -70,12 +61,11 @@ export function Home() {
               topRatedMedia.map((tv, index) => <TvElement key={tv.id} {...tv} reSize={windowSize} x={x} index={index} positionClick={positionClick} hover={(p) => setX(p)} />)
           }
         </motion.div>
-        <div className="boxButton">
-          <MdOutlineKeyboardArrowLeft onClick={handleClickLeft} className="button" />
-          <MdOutlineKeyboardArrowRight onClick={handleClickRight} className="button" />
-        </div>
+    
       </section>
 
+  
+      
     </main>
   );
 }

@@ -39,6 +39,8 @@
     padding-bottom:10%;
 }
 
+
+
 .homePage .title {
     font-family: 'Roboto', cursive;
     font-size: 4.7rem;
@@ -48,6 +50,50 @@
 .homePage .firstWord-title {
     color: var(--color-title);
 }
+
+.homePage .nav{
+  transition: 500ms;
+  padding: 7px;
+  background-color: var(--color-effect-title);
+  position: absolute;
+  top: 50%;
+  left: -80px;
+  bottom: 0;
+  width:200px;
+  height: 50px;
+  border-radius: 100px 100px 5px 5px;
+  transform: rotate(90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homePage .nav:hover{
+  left: -70px;
+
+}
+
+.homePage .nav .link{
+
+transform: rotate(-90deg);
+}
+
+.homePage .nav .link:hover{
+  width: max-content;
+}
+
+.homePage .nav .link .icon{
+  transition: 500ms;
+  font-size: 35px;
+  color: var(--color-text);
+}
+
+.homePage .nav .link .icon:hover{
+  color: var(--color-title);
+  transform: scale(1.2);
+}
+
+
 
 .home .boxCard {
     height: 93vh;
@@ -86,6 +132,7 @@
     justify-items: center;
     align-content: center;
     gap: 20px;
+    border-bottom: 7px solid var(--color-text-effect);
 }
 
 .boxCard .boxButton {
@@ -104,10 +151,10 @@
 }
 
 .boxButton .button:hover {
-    font-weight: 700;
+
     scale: 1.1;
     background-color: var(--color-title);
-    transition: 0.3s;
+    transition: 500ms;
 }
 
 
@@ -132,4 +179,128 @@
         grid-column: 1 / 3;
         grid-row: 3;
     }
+}
+
+.information {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    margin: 100px 0;
+    gap: 25px;
+    justify-content: space-around;
+  }
+  
+  .information .image {
+    height: 110px;
+    flex: 0.8 3 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-text-effect);
+    border-radius: 100px 100px 5px 5px;
+  }
+  
+  .information .image .fond {
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    background-color: var(--color-effect-title);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+  
+  .information .image .fond .icon {
+    font-size: 180px;
+    animation-name: iconInformationAnimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes iconInformationAnimation {
+  
+    25% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1) rotate(360deg);
+    }
+    75% {
+      opacity: 1;
+      transform: scale(1.2) rotate(360deg);
+    }
+    
+    
+  }
+  
+  .information .text {
+    flex: 0 2 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 20px;
+    font-weight: 500;
+  }
+  
+  .information .text ul {
+    padding: 0 20px;
+  }
+  
+  
+.prefooter{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+
+.prefooter .cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.prefooter .cards .card{
+  width: 10em;
+  height: 10em;
+  background-color: var(--color-text-effect);
+  border-radius: 16px;
+  box-shadow: 0 0 10px var(--color-effect-title);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.prefooter .cards .card .icon{
+  font-size: 100px;
+  transition: 500ms;
+}
+
+.prefooter .cards .card .icon:hover{
+  transform: scale(1.2);
+  
+}
+
+
+#pfCard1{
+  position: relative;
+  left: 5px;
+}
+
+#pfCard2{
+  position: relative;
+  left: 5px;
+  z-index: 2;
+  transform: scale(1.2);
+}
+
+.prefooter .text{
+  text-align: center;
 }

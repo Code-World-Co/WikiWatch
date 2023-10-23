@@ -20,8 +20,11 @@ export function SectionMedia(props) {
       const screenWidth = window.innerWidth;
       let newCardsToShow = 5;
 
-      if (screenWidth < 768) {
+      if (screenWidth < 430) {
         newCardsToShow = 1;
+      }
+      else  if (screenWidth < 768) {
+        newCardsToShow = 2;
       } else if (screenWidth < 1024) {
         newCardsToShow = 3;
       } else if (screenWidth < 1200) {
@@ -69,7 +72,8 @@ export function SectionMedia(props) {
       <section className="sectionMediaContent">
 
       <div className="linkContainer">
-        <Link className="link" to="/all">
+        
+        <Link className="link"  to={`/all/${props.category}/${encodeURIComponent(JSON.stringify(props.media))}`} onclick = {onclick}>
           <CiGrid41 /> 
         </Link>
       </div>

@@ -1,9 +1,9 @@
 .sectionMedia {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    position: relative;
+    gap: 10px;
     padding: 10px 0px;
+    margin: 10px 0px;
   }
   
   .sectionMedia header {
@@ -14,8 +14,8 @@
     font-size: 30px;
     font-weight: 800;
     background-color: var(--color-title);
-    padding: 5px 10px;
-    border-radius: 7px;
+    padding: 5px 20px;
+    border-radius: 7px 7px 100px 7px;
     width: fit-content;
   }
   
@@ -33,7 +33,6 @@
     padding: 2px 20px;
     background-color: var(--color-text-effect);
     border-radius: 5px 5px 30px 30px;
-    
     display: flex;
     align-items: center;
     gap: 5px;
@@ -46,29 +45,24 @@
   
   .sectionMedia .mediaContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 15px 5px;
+    grid-template-columns: repeat(auto-fit , minmax(200px, 1fr));
     gap: 7px;
-    position: relative; /* Agregar posición relativa al contenedor */
   }
   
-  .sectionMedia .mediaContainer a {
-    display: flex;
-    justify-content: center; /* Centrar las cartas horizontalmente */
-  }
+
   
   .sectionMedia .mediaContainer a .card {
     border-radius: 16px;
-    height: 300px;
+    height: 350px;
     transition: 500ms;
-    position: relative;
     z-index: 1;/* Asegurar que las cartas estén por encima del contenedor de los botones */
   }
   
   .sectionMedia .mediaContainer a:hover .card {
-    box-shadow: 7px 7px var(--color-title);
-    transform: scale(1.05);
-     /* Aumentar el índice z para que las cartas en hover estén por encima del contenedor de los botones */
+    transition: 500ms;
+    box-shadow:  0px 0px 30px 0px var(--color-text-effect);
+    position: relative;
+    top: -20px;
   }
   
   .sectionMedia .mediaContainer a .card span {
@@ -113,14 +107,17 @@
   .sectionMediaContent .linkContainer .link {
     position: relative;
     font-size: 30px;
-    padding: 2px 20px;
+    padding: 2px 7px;
     background-color: var(--color-text-effect);
-    border-radius: 5px 5px 30px 30px;
+    border-radius: 30px 30px 5px 5px;
     z-index: 3;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
     transition: 500ms;
+    top: -35px;
+    min-width: 150px;
   }
 
   .sectionMediaContent .linkContainer .link:hover{

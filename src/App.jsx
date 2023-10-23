@@ -9,6 +9,8 @@ import { Routes, Route } from "react-router-dom";
 import './style/App.css';
 import { MovieInfo } from "./components/movieInfo";
 import  { AlertHome } from "./components/AlertHome";
+import { TvInfo } from "./components/tvInfo";
+import { All } from "./components/All";
 
 function App() {
 
@@ -35,10 +37,13 @@ function App() {
           <div>
             <Header />
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/WikiWatch/" element={<Home />} />
               <Route path="/movies" element={<Movies isAdult={valueAlert} />} />
               <Route path="/movie/:id" element={<MovieInfo />} />
+              <Route path="/tv/:id" element={<TvInfo />} />
               <Route path="/tv" element={<Tv isAdult={valueAlert} />} />
+              <Route path="/all/:category/:media" element={<All />} />
+
             </Routes>
             <Footer />
           </div>

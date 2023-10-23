@@ -6,14 +6,15 @@
     flex-wrap: wrap;
     height: 60px;
     min-height: 7vh;
-    padding: 0 20px;
+    padding: 7px 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 99;
+    border-bottom: 2.5px solid var(--color-text-effect);
 }
-
+    
 .navWeb .logo{
     display: flex;
     align-items: center;
@@ -23,15 +24,9 @@
     font-weight: 500;
 }
 
-.navWeb .icon{
-    color: var(--color-text);
-}
-
-
 .navWeb .navWeb-link{
     display: flex;
-    flex-direction: row;
-    width: 250px;
+    flex-basis: 250px;
     justify-content: space-between;
     align-items: center;
 }
@@ -40,8 +35,14 @@
     display: flex;
     align-items: center;
     font-size: 1.5rem;
-    font-weight: 500;
+    background-color: var(--color-text-effect);
+    padding: 2px 20px;
+    border-radius:  20px 5px;
+    font-weight: 1000;
+    font-family: 'Montserrat', sans-serif;
+    gap: 2px;
 }
+
 
 .navWeb .logo .firstWord-title{
     font-family: 'Roboto', Courier;
@@ -53,6 +54,8 @@
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
+        padding: 20px 5px;
+        gap: 10px;
     }
 
     .navWeb .logo .title{
